@@ -1,11 +1,11 @@
 require('dotenv').config()
-const { Bot, InlineKeyboard, GrammyError, HttpError } = require('grammy', 'telegraf')
-
-const bot = new Bot('6339884292:AAFq0irwpBp3pkZo04HvbF_Otdgb9jAdlYI')
+const { Bot, InlineKeyboard, Keyboard, GrammyError, HttpError } = require('grammy')
+const TOKEN=process.env.TOKEN
+const bot = new Bot(TOKEN)
 
 bot.command('start', async (ctx) => {
     const startKeyboard = new Keyboard()
-        .text('edo.ijro.uz')
+        .text('edo.ijro.uz', 'sasa')
         .text('E-HUQUQSHUNOS')
         .row()
         .text('YARATUVCHI: S.Abdullayev')
@@ -36,17 +36,10 @@ bot.hears(['edo.ijro.uz'], async (ctx) => {
     })
 })
 
-bot.on('callback_query:data', async (ctx) => {
-    if(ctx.callbackQuery.data ==='dars1') {
-        await ctx.reply('saklskla')
-        await ctx.an
-    }
-})
-
 bot.hears(['E-HUQUQSHUNOS'], async (ctx) => {
-    const inlineKeybioard = new InlineKeyboard()
+    const inlineHuquqshunos = new InlineKeyboard()
     await ctx.reply('JARAYONDA', {
-        reply_markup: inlineKeybioard
+        reply_markup: inlineHuquqshunos
     })
 })
 
@@ -69,7 +62,7 @@ bot.catch((err) => {
     } else {
       console.error("Unknown error:", e);
     }
-  });
+});
 
 
 bot.start()
