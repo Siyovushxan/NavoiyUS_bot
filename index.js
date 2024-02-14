@@ -24,7 +24,7 @@ Shartnoma bo'limi
 })
 
 bot.hears(['"UNICON SOFT" Navoiy viloyat filiali telifon raqamlari va telegram profillari'], async (ctx) => {
-    const inlineHuquqshunos = new InlineKeyboard()
+    const inlineHuquqshunos = new InlineKeyboard()git status
     await ctx.reply(`
 Texnik qo'llab quvvatlash 👇
     📞 95 475 47 09
