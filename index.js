@@ -46,7 +46,33 @@ bot.hears(['E-HUQUQSHUNOS'], async (ctx) => {
 bot.hears(['YARATUVCHI: S.Abdullayev'], async (ctx) => {
     const inlineUrl = new InlineKeyboard()
     .url('PORTPLIO', 'https://mycv.unaux.com/')
-    await ctx.reply('PORTFOLIO WEB SAYTIMNI KO`RIB CHIQING VA MUROJAAT QILING', {
+    await ctx.reply(`
+
+🤔 Kompyuter bilan ishlashda sizda muammo bormi ❓
+
+🤔 Ishingizda zamonaviy elektron  tizimlarda ishlashda qiynalyapsizmi ❓
+
+🤔 Web dasturchi bo'lmoqchimisiz ❓
+
+Sizga taklif qilamiz ❗️❗️❗️
+
+📖 Kompyuter savodxonligi
+📖 Zamonaviy elektron tizimlar
+📖 Web dasturlash
+
+Yo'nalishlarida o'qing va kompyuter bilan ishlashdagi muammolaringizni oldini oling.
+Darslar S.Abdullayev va S.Naimov tomonidan olib boriladi.
+
+Tel:
+    📞 94 337 32 35
+    📞 90 665 37 55
+
+Telegram:
+    @XAN_AKADEMIYA
+    @UNICON_SOFT_NAVOIY
+
+Batafsil ma'lumot olish uchun pastdagi saytni ko'rib chiqishni taklif qilamiz 👇👇👇
+    `, {
         reply_markup: inlineUrl
     })
 })
