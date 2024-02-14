@@ -5,26 +5,25 @@ const bot = new Bot(TOKEN)
 
 bot.command('start', async (ctx) => {
     const startKeyboard = new Keyboard()
-        .text('"UNICON SOFT" Navoiy viloyat filiali telifon raqamlari va telegram profillari')
+        .text('"UNICON SOFT" Navoiy viloyat filiali telifon raqamlari va telegram profili')
         .row()
         .text('edo.ijro.uz')
         .text('E-HUQUQSHUNOS')
         .row()
         .text('YARATUVCHI: S.Abdullayev')
         await ctx.reply( `Assalomu alaykum ❗️❗️❗️
-"UNICON SOFT" Navoiy viloyat filiali hodimi tomonidan ishlab chiqilgan vedio darsliklar
 
-Texnik qo'llab-quvvatlash
-📞 95 514 46 46
+"UNICON SOFT" Navoiy viloyat filiali
 
-Shartnoma bo'limi
-📞 95 503 46 46`, {
+Ijro intizomi Idolararo elektron tizimiga doir vedio darsliklarni taqdim etadi
+`, {
+          reply_markup: startKeyboard,
           reply_markup: startKeyboard
         })
 })
 
-bot.hears(['"UNICON SOFT" Navoiy viloyat filiali telifon raqamlari va telegram profillari'], async (ctx) => {
-    const inlineHuquqshunos = new InlineKeyboard()git status
+bot.hears(['"UNICON SOFT" Navoiy viloyat filiali telifon raqamlari va telegram profili'], async (ctx) => {
+    const inlineHuquqshunos = new InlineKeyboard()
     await ctx.reply(`
 Texnik qo'llab quvvatlash 👇
     📞 95 475 47 09
