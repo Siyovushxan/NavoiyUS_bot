@@ -5,7 +5,7 @@ const bot = new Bot(TOKEN)
 
 bot.command('start', async (ctx) => {
     const startKeyboard = new Keyboard()
-        .text('"UNICON SOFT" Navoiy viloyat filiali telifon raqamlari')
+        .text('"UNICON SOFT" Navoiy viloyat filiali telifon raqamlari va telegram profillari')
         .row()
         .text('edo.ijro.uz')
         .text('E-HUQUQSHUNOS')
