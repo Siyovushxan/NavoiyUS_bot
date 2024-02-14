@@ -5,7 +5,9 @@ const bot = new Bot(TOKEN)
 
 bot.command('start', async (ctx) => {
     const startKeyboard = new Keyboard()
-        .text('edo.ijro.uz', 'sasa')
+        .text('"UNICON SOFT" Navoiy viloyat filiali telifon raqamlari')
+        .row()
+        .text('edo.ijro.uz')
         .text('E-HUQUQSHUNOS')
         .row()
         .text('YARATUVCHI: S.Abdullayev')
@@ -19,6 +21,26 @@ Shartnoma bo'limi
 📞95 503 46 46`, {
           reply_markup: startKeyboard
         })
+})
+
+bot.hears(['"UNICON SOFT" Navoiy viloyat filiali telifon raqamlari'], async (ctx) => {
+    const inlineHuquqshunos = new InlineKeyboard()
+    await ctx.reply(`
+Texnik qo'llab quvvatlash 👇
+    📞 95 475 47 09
+    📞 95 475 47 06
+    📞 95 514 46 46
+    📞 95 475 47 42
+    
+    ✉️ @NavoiyUS_Texnik
+    
+Shartnoma va hisob-kitob bo'limi 👇
+    📞 95 503 46 46
+    
+    ✉️ @NavoiyUS_Shartnoma
+    `, {
+        reply_markup: inlineHuquqshunos
+    })
 })
 
 bot.hears(['edo.ijro.uz'], async (ctx) => {
