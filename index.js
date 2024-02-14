@@ -17,7 +17,6 @@ bot.command('start', async (ctx) => {
 
 Ijro intizomi Idolararo elektron tizimiga doir vedio darsliklarni taqdim etadi
 `, {
-          reply_markup: startKeyboard,
           reply_markup: startKeyboard
         })
 })
@@ -47,15 +46,27 @@ bot.hears(['edo.ijro.uz'], async (ctx) => {
     .text('1.Devonxona', 'dars1')
     .text('2.Sektor Fishka', 'dars2')
     .row()
-    .text('3.Rezolyutsiya loyihasini imzolash', 'dars3')
-    .text('4.Ijrochi tominidan javob kiritish', 'dars4')
+    .text('3.Rezolyutsiya', 'dars3')
     .row()
-    .text('5.Javob xatini imzolash', 'dars5')
-    .text('6.Nazoratdan yechish', 'dars6')
+    .text('4.Ijrochi', 'dars4')
+    .text('5.Nazorat', 'dars5')
     await ctx.reply('Ketma-ketlikda kurishni tavsiya qilamiz', {
         reply_markup: inlineKeybioard
     })
 })
+
+bot.on('callback_query:data', async (ctx) => {
+    if (ctx.callbackQuery.data === 'dars1') {
+        // Fayl nomi yoki URL-ni to'g'ri yozing
+        const videoFilePathOrURL = './edo/dars2.mp4';
+
+        // Fayl yuborish
+        await ctx.replyWithVideo({ source: videoFilePathOrURL });
+
+        // Tugmani bosgan foydalanuvchiga javob berish
+        await ctx.answerCallbackQuery();
+    }
+});
 
 bot.hears(['E-HUQUQSHUNOS'], async (ctx) => {
     const inlineHuquqshunos = new InlineKeyboard()
