@@ -124,3 +124,5 @@ bot.catch((err) => {
 
 
 bot.start()
+
+// "test": "echo \"Error: no test specified\" && exit 1"
