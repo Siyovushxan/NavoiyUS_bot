@@ -55,18 +55,18 @@ bot.hears(['edo.ijro.uz'], async (ctx) => {
     })
 })
 
-bot.on('callback_query:data', async (ctx) => {
-    if (ctx.callbackQuery.data === 'dars1') {
-        // Fayl nomi yoki URL-ni to'g'ri yozing
-        const videoFilePathOrURL = './edo/dars2.mp4';
+// bot.on('callback_query:data', async (ctx) => {
+//     if (ctx.callbackQuery.data === 'dars1') {
+//         // Fayl nomi yoki URL-ni to'g'ri yozing
+//         const videoFilePathOrURL = './edo/dars2.mp4';
 
-        // Fayl yuborish
-        await ctx.replyWithVideo({ source: videoFilePathOrURL });
+//         // Fayl yuborish
+//         await ctx.replyWithVideo({ source: videoFilePathOrURL });
 
-        // Tugmani bosgan foydalanuvchiga javob berish
-        await ctx.answerCallbackQuery();
-    }
-});
+//         // Tugmani bosgan foydalanuvchiga javob berish
+//         await ctx.answerCallbackQuery();
+//     }
+// });
 
 bot.hears(['E-HUQUQSHUNOS'], async (ctx) => {
     const inlineHuquqshunos = new InlineKeyboard()
@@ -92,7 +92,7 @@ Sizga taklif qilamiz ❗️❗️❗️
 📖 Zamonaviy elektron tizimlar
 📖 Web dasturlash
 
-Yo'nalishlarida o'qing va kompyuter bilan ishlashdagi muammolaringizni oldini oling.
+yuqoridagi yo'nalishlarida o'qing va kompyuter bilan ishlashdagi muammolaringizni oldini oling.
 Darslar S.Abdullayev va S.Naimov tomonidan olib boriladi.
 
 Tel:
