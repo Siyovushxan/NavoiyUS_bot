@@ -43,6 +43,7 @@ Shartnoma va hisob-kitob bo'limi 👇
 
 bot.hears(['edo.ijro.uz'], async (ctx) => {
     const inlineKeybioard = new InlineKeyboard()
+    .row()
     .text('1.Devonxona', 'dars1')
     .text('2.Sektor Fishka', 'dars2')
     .row()
@@ -50,7 +51,8 @@ bot.hears(['edo.ijro.uz'], async (ctx) => {
     .row()
     .text('4.Ijrochi', 'dars4')
     .text('5.Nazorat', 'dars5')
-    await ctx.reply('Ketma-ketlikda kurishni tavsiya qilamiz', {
+    .row()
+    await ctx.reply('Vedio dasrliklarni ketma-ketlikda ko`rishni tavsiya qilamiz ❗️❗️❗️', {
         reply_markup: inlineKeybioard
     })
 })
@@ -92,7 +94,7 @@ Sizga taklif qilamiz ❗️❗️❗️
 📖 Zamonaviy elektron tizimlar
 📖 Web dasturlash
 
-yuqoridagi yo'nalishlarida o'qing va kompyuter bilan ishlashdagi muammolaringizni oldini oling.
+Yuqoridagi yo'nalishlarida o'qing va kompyuter bilan ishlashdagi muammolaringizni oldini oling.
 Darslar S.Abdullayev va S.Naimov tomonidan olib boriladi.
 
 Tel:
