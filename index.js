@@ -58,18 +58,12 @@ bot.hears(['edo.ijro.uz'], async (ctx) => {
     })
 })
 
-const { Telegram } = require('telegraf');
 const fs = require('fs');
+const ytdl = require('ytdl-core')
 
 bot.on('callback_query:data', async (ctx) => {
     if (ctx.callbackQuery.data === 'dars1') {
-        // Faylni o'qib olamiz
-        // const fileStream = fs.createReadStream('./edo/dars2.mp4');
-        
-        // Yuborish uchun telegramga faylni yuborish
-        await ctx.replyWithVideo({ source: fileStream });
-        
-        // Javob berish
+        await ctx.replyWithVideo(ytdl('https://youtu.be/oIYrv-h5Bo8?si=D8Tk7J1wefgN2pip'))
         await ctx.answerCallbackQuery();
     }
 
@@ -204,11 +198,13 @@ Batafsil ma'lumot olish uchun pastdagi saytni ko'rib chiqishni taklif qilamiz �
 bot.hears([`O'quv kurslar`], async (ctx) => {
     const inlineHuquqshunos = new InlineKeyboard()
     .text('Kompyuter savodxonligi', 'Kompyuter')
+    .row()
     .text('Elektron tizimlar', 'Elektron')
     .row()
     .text('Web dasturlash (Frontend)', 'Frontend')
     await ctx.reply(`
-Batafsil ma'lumot olish uchun har bir kurs bilan tanishib chiqing va bizga murojaat qiling ❗️❗️❗️
+Batafsil ma'lumot olish uchun har bir kurs bilan tanishib chiqing va
+bizga murojaat qiling ❗️❗️❗️
 
 Kurslarni tamomlaganingizdan keyin kompyuter savodxonlik darajangiz albatta ortadi 👌
 
