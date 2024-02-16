@@ -203,10 +203,10 @@ Batafsil ma'lumot olish uchun pastdagi saytni ko'rib chiqishni taklif qilamiz �
 
 bot.hears([`O'quv kurslar`], async (ctx) => {
     const inlineHuquqshunos = new InlineKeyboard()
-    .text('💻 Kompyuter savodxonligi', 'Kompyuter')
-    .text('💻 Elektron tizimlar', 'Elektron')
+    .text('Kompyuter savodxonligi', 'Kompyuter')
+    .text('Elektron tizimlar', 'Elektron')
     .row()
-    .text('🖥 Web dasturlash (Frontend)', 'Frontend')
+    .text('Web dasturlash (Frontend)', 'Frontend')
     await ctx.reply(`
 Batafsil ma'lumot olish uchun har bir kurs bilan tanishib chiqing va bizga murojaat qiling ❗️❗️❗️
 
