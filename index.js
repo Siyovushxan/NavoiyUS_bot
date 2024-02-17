@@ -58,12 +58,14 @@ bot.hears(['edo.ijro.uz'], async (ctx) => {
     })
 })
 
-const fs = require('fs');
-const ytdl = require('ytdl-core')
-
 bot.on('callback_query:data', async (ctx) => {
     if (ctx.callbackQuery.data === 'dars1') {
-        await ctx.replyWithVideo(ytdl('https://youtu.be/oIYrv-h5Bo8?si=D8Tk7J1wefgN2pip'))
+        const video_url = "https://youtu.be/oIYrv-h5Bo8?si=5BYcXn47_PS_72cK";
+        await ctx.reply(`YouTube kanaalimizga a'zo bo'ling: 👇👇👇
+        https://www.youtube.com/@siyovushxan
+        
+        EDO IJRO tizmiga oid vedio darsliklar
+        ${video_url}`);
         await ctx.answerCallbackQuery();
     }
 
@@ -156,9 +158,12 @@ Loyihalar tayyor dezayn asosida ishlab chiqiladi
 
 bot.hears(['E-HUQUQSHUNOS'], async (ctx) => {
     const inlineHuquqshunos = new InlineKeyboard()
-    await ctx.reply('JARAYONDA', {
-        reply_markup: inlineHuquqshunos
-    })
+    const video_url = "https://youtu.be/oIYrv-h5Bo8?si=5BYcXn47_PS_72cK";
+    await ctx.reply(`YouTube kanaalimizga a'zo bo'ling: 👇👇👇
+    https://www.youtube.com/@siyovushxan
+    
+    E - HUQUQSHUNOS vedio darslari
+    ${video_url}`);
 })
 
 bot.hears(['Yaratuvchi: S.Abdullayev'], async (ctx) => {
