@@ -14,11 +14,18 @@ bot.command('start', async (ctx) => {
         .row()
         .text(`O'quv kurslar`)
         .text(`1C taklif qiladi 👍`)
-        await ctx.reply( `Assalomu alaykum ❗️❗️❗️
+        await ctx.reply( `
+Barcha uchun takliflar "XAN AKADEMIYA" asoschisi Siyovush Abdullayev
 
-"UNICON SOFT" Navoiy viloyat filiali
+⌨️ "UNICON SOFT" Navoiy viloyat filiali Ijro intizomi Idoralararo elektron tizimiga doir video darsliklarini
 
-Ijro intizomi Idolararo elektron tizimiga doir vedio darsliklarni taqdim etadi
+🖥 Hozirgi vaqtdagi barcha zamonaviy elektron tizimlarga doir vedio darsliklar va o'quv kurslarini
+
+📈 1C tijorat takliflarini. TASHKILOTLAR uchun
+
+💻 "XAN AKADEMIYA" o'quv kurslarini taqdim qiladi
+
+IT sohasidagi fikrlashingizni va bilimlaringizni o'zgartirish o'z qo'lingizda
 `, {
           reply_markup: startKeyboard
         })
@@ -53,7 +60,7 @@ bot.hears(['edo.ijro.uz'], async (ctx) => {
     .row()
     .text('4.Ijrochi', 'dars4')
     .text('5.Nazorat', 'dars5')
-    await ctx.reply(`Vedio dasrliklarni ketma-ketlikda ko'rishni tavsiya qilamiz ❗️❗️❗️`, {
+    await ctx.reply(`Vedio darsliklarni ketma-ketlikda ko'rishni tavsiya qilamiz ❗️`, {
         reply_markup: inlineKeybioard
     })
 })
@@ -61,18 +68,19 @@ bot.hears(['edo.ijro.uz'], async (ctx) => {
 bot.on('callback_query:data', async (ctx) => {
     if (ctx.callbackQuery.data === 'dars1') {
         const video_url = "https://youtu.be/oIYrv-h5Bo8?si=5BYcXn47_PS_72cK";
-        await ctx.reply(`YouTube kanaalimizga a'zo bo'ling: 👇👇👇
-        https://www.youtube.com/@siyovushxan
+        await ctx.reply(`
+YouTube kanaalimizga a'zo bo'ling: 👇👇👇
+https://www.youtube.com/@siyovushxan
         
-        EDO IJRO tizmiga oid vedio darsliklar
-        ${video_url}`);
+EDO IJRO tizmiga oid vedio darsliklar
+${video_url}`);
         await ctx.answerCallbackQuery();
     }
 
     // O'quv kurslari
     if (ctx.callbackQuery.data === 'Kompyuter') {
         await ctx.reply(`
-Kompyuter savodxonligiga asoslangan kurs ❗️❗️❗️
+Kompyuter savodxonligiga asoslangan kurs TEZ ORADA ❗️
 
 1. Kompyuterning dasturiy ta'minotlari bilan tanishuv ✅
 
@@ -95,19 +103,13 @@ Kompyuter bilan ishlashda sizda bundan keyin muammo bo'lmaydi
 
     if (ctx.callbackQuery.data === 'Elektron') {
         await ctx.reply(`
-Elektron tizimlarga asoslangan vedio kurs ❗️❗️❗️
+Elektron tizimlarga asoslangan vedio kurslar TEZ ORADA ❗️
 
-1. id.gov.uz ✅
+1. id.gov.uz ✅  2. my.gov.uz ✅
 
-2. my.gov.uz ✅
+3. my.mehnat.uz ✅  4. edo.ijro.uz ✅
 
-3. my.mehnat.uz ✅
-
-4. edo.ijro.uz ✅
-
-5. lawyer.ijro.uz ✅
-
-6. fo.birdarcha.uz ✅
+5. lawyer.ijro.uz ✅  6. fo.birdarcha.uz ✅
 
 7. new.birdarcha.uz ✅
 
@@ -120,23 +122,15 @@ Elektron tizimlar bilan ishlashda sizda bundan keyin muammo bo'lmaydi
 
     if (ctx.callbackQuery.data === 'Frontend') {
         await ctx.reply(`
-WEB dasturlash (Frontend) asoslangan kurs ❗️❗️❗️
+WEB dasturlash (Frontend) asoslangan kurs TEZ ORADA ❗️
 
-1. HTML ✅
+1. HTML ✅  2. CSS ✅
 
-2. CSS ✅
+3. BOOTSTRAP ✅  4. GIT HUB ✅
 
-3. BOOTSTRAP ✅
+5. FIGMA ✅  7. TRELLO ✅
 
-4. GIT HUB ✅
-
-5. FIGMA ✅
-
-7. TRELLO ✅
-
-8. JIRA ✅
-
-9. JAVASCRIPT ✅
+8. JIRA ✅  9. JAVASCRIPT ✅
 
 10. REACTJS ✅
 
@@ -144,7 +138,7 @@ Yuqorida keltirilgan bo'limlardan iborat bo'lgan o'quv kursiga taklif qilamiz.
 
 Kurs ohirida o'zingizning mycv.unaux.com web saytiga o'xshagan PORTFOIO saytingiz va @NavoiyUS_bot telegram botga o'xshagan shaxsiy telegram botingizga ega bo'lasiz
 
-Loyihalar tayyor dezayn asosida ishlab chiqiladi
+    ✅Loyihalar tayyor dezayn asosida ishlab chiqiladi
 
     ✅ Serverga qo'yiladi
 
@@ -159,11 +153,12 @@ Loyihalar tayyor dezayn asosida ishlab chiqiladi
 bot.hears(['E-HUQUQSHUNOS'], async (ctx) => {
     const inlineHuquqshunos = new InlineKeyboard()
     const video_url = "https://youtu.be/oIYrv-h5Bo8?si=5BYcXn47_PS_72cK";
-    await ctx.reply(`YouTube kanaalimizga a'zo bo'ling: 👇👇👇
-    https://www.youtube.com/@siyovushxan
+    await ctx.reply(`
+YouTube kanaalimizga a'zo bo'ling: 👇
+https://www.youtube.com/@siyovushxan
     
-    E - HUQUQSHUNOS vedio darslari
-    ${video_url}`);
+E - HUQUQSHUNOS vedio darslari
+${video_url}`);
 })
 
 bot.hears(['Yaratuvchi: S.Abdullayev'], async (ctx) => {
@@ -171,20 +166,20 @@ bot.hears(['Yaratuvchi: S.Abdullayev'], async (ctx) => {
     .url('PORTPLIO', 'https://mycv.unaux.com/')
     await ctx.reply(`
 
-🤔 Kompyuter bilan ishlashda sizda muammo bormi ❓
+🤔 Kompyuterni yaxshi tushunmaysizmi ❓
 
-🤔 Ishingizda zamonaviy elektron  tizimlarda ishlashda qiynalyapsizmi ❓
+🤔 Ishingizdagi elektron tizimlar murakkabmi ❓
 
 🤔 Web dasturchi bo'lmoqchimisiz ❓
 
 Sizga taklif qilamiz ❗️❗️❗️
 
-📖 Kompyuter savodxonligi
-📖 Zamonaviy elektron tizimlar
-📖 Web dasturlash
+📖 Kompyuter savodxonligi ✅
+📖 Zamonaviy elektron tizimlar ✅
+📖 Web dasturlash ✅
 
-Yuqoridagi yo'nalishlarida o'qing va kompyuter bilan ishlashdagi muammolaringizni oldini oling.
-Darslar S.Abdullayev va S.Naimov tomonidan olib boriladi.
+Yuqoridagi kurslarda o'qing va malakali mutaxasislardan o'rganing
+Darslar S.Abdullayev va S.Naimov tomonidan olib boriladi
 
 Tel:
     📞 94 337 32 35
